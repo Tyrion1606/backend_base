@@ -16,6 +16,7 @@ class LocationDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call("OthersTableSeeder");
+        $this->call(LocationStateSeeder::class);
+        $this->call(LocationCitySeeder::class);
     }
 }
