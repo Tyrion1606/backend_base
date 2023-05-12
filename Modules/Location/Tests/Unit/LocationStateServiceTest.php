@@ -31,13 +31,13 @@ class LocationStateServiceTest extends TestCase
         $service = new LocationStateService();
         $foundState = $service->find('AM');
 
-        $this->assertEquals('AM', $foundState->abbreviation);
+        $this->assertEquals('AM', $foundState->uf);
     }
 
     public function test_get_cities_from_state()
     {
         $state = LocationState::factory()
-            ->has(LocationCity::factory()->count(3))
+            ->has(LocationCity::factory()->count(3), 'cities')
             ->create([
                 'uf' => 'AM'
             ]);

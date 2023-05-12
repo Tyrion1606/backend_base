@@ -14,7 +14,7 @@ class LocationState extends Model
     use HasFactory;
 
     protected $table = 'location_states';
-    protected $fillable = ['name', 'abbreviation'];
+    protected $fillable = ['name', 'uf'];
 
     protected static function newFactory()
     {
