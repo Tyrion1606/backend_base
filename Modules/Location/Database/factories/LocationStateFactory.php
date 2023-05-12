@@ -3,7 +3,7 @@
 namespace Modules\Location\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Modules\Location\Entities\LocationState;
+use Modules\Location\Models\LocationState;
 
 
 class LocationStateFactory extends Factory

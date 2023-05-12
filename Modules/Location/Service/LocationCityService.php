@@ -2,7 +2,7 @@
 
 namespace Modules\Location\Service;
 
-use Modules\Location\Entities\LocationCity;
+use Modules\Location\Models\LocationCity;
 
 class LocationCityService
 {
@@ -20,10 +20,10 @@ class LocationCityService
      * Encontra uma cidade com base no nome fornecido.
      *
      * @param string $name
-     * @return \Modules\Location\Entities\LocationCity|null
+     * @return \Modules\Location\Models\LocationCity|null
      */
     public function find(string $name)
     {
-        return LocationCity::where('name', $name)->first();
+        return LocationCity::where('name', $name)->firstOrFail();
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Location\Entities;
+namespace Modules\Location\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

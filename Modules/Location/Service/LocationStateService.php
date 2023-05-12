@@ -2,7 +2,7 @@
 
 namespace Modules\Location\Service;
 
-use Modules\Location\Entities\LocationState;
+use Modules\Location\Models\LocationState;
 
 class LocationStateService
 {
@@ -20,11 +20,11 @@ class LocationStateService
      * Encontra um estado com base na UF fornecida.
      *
      * @param string $uf
-     * @return \Modules\Location\Entities\LocationState|null
+     * @return \Modules\Location\Models\LocationState|null
      */
     public function find(string $uf)
     {
-        return LocationState::where('uf', $uf)->first();
+        return LocationState::where('uf', $uf)->firstOrFail();
     }
 
     /**
@@ -36,9 +36,9 @@ class LocationStateService
     public function getCitiesFromState(string $uf)
     {
         $state = $this->find($uf);
-        if ($state) {
-            return $state->cities;
-        }
-        return null;
+        if (!$state) {
+            return null;
+          }
+        return $state->cities;
     }
 }

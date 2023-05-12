@@ -4,7 +4,7 @@ namespace Modules\Location\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
-use Modules\Location\Entities\LocationState;
+use Modules\Location\Models\LocationState;
 
 class LocationStateTest extends TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Location\Entities;
+namespace Modules\Location\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -14,6 +14,7 @@ class LocationCity extends Model
 
     protected $table = 'location_cities';
     protected $fillable = ['name', 'ibge_code', 'state_id'];
+    protected $with = ['state'];
 
     protected static function newFactory()
     {

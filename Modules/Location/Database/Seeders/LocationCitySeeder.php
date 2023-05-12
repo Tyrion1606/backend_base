@@ -4,8 +4,8 @@ namespace Modules\Location\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use Modules\Location\Entities\LocationCity;
-use Modules\Location\Entities\LocationState;
+use Modules\Location\Models\LocationCity;
+use Modules\Location\Models\LocationState;
 
 class LocationCitySeeder extends Seeder
 {
