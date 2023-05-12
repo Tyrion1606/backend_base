@@ -11,6 +11,3 @@
 |
 */
 
-Route::prefix('location')->group(function() {
-    Route::get('/', 'LocationController@index');
-});
