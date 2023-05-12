@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+         bootstrap="../../vendor/autoload.php"
+         colors="true"
+         processIsolation="false"
+         stopOnFailure="false"
+
+>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./</directory>
+        </include>
+    </coverage>
+    <testsuites>
+        <testsuite name="Module Test Suite">
+            <directory>./Tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <server name="APP_ENV" value="testing"/>
+        <server name="APP_KEY" value="base64:q0um3pgN3Dj9MCTyg0E9X/ijUZIYkMwT0TmTlTc6aA0="/>
+        <server name="APP_DEBUG" value="true"/>
+        <server name="APP_URL" value="http://localhost"/>
+        <server name="DB_CONNECTION" value="sqlite"/>
+        <server name="DB_DATABASE" value=":memory:"/>
+        <server name="CACHE_DRIVER" value="array"/>
+        <server name="SESSION_DRIVER" value="array"/>
+        <server name="QUEUE_DRIVER" value="sync"/>
+        <server name="MAIL_MAILER" value="array"/>
+    </php>
+</phpunit>
